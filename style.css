@@ -320,22 +320,22 @@ button:hover {
 
   .navbar {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 1.7rem);
     right: 0;
     background: #fff;
     width: 100%;
-    height: calc(100vh - 3rem);
+    height: 100vh;
   }
 
-  .navbar ul {
+  .navbar > ul {
     display: block;
   }
 
-  .navbar a {
+  .navbar .nav_link {
     color: var(--primary-text-color);
-    display: block;
-    margin: 1.5rem;
+    display: inline-block;
+    margin: 1rem;
     padding: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
