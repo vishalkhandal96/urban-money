@@ -4,6 +4,7 @@
   --first-color: #474ebb;
   --second-color: #c65764;
   --third-color: #e07c08;
+  --fourth-color: #f2e455;
   --first-color-hover: #3d46be;
   --primary-text-color: #181b30;
   --secondary-text-color: #6e6e6e;
@@ -15,6 +16,7 @@
 
   --clr-light: #fff;
   --clr-dark: #181b30;
+  --clr-gray: #e4e4e4;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -136,7 +138,7 @@ button:hover {
 
 .header {
   width: 100%;
-  position: fixed;
+  position: sticky;
   padding: 1rem 5%;
   box-shadow: 0 2px 8px hsla(220, 68%, 12%, 0.1);
   background-color: var(--body-color);
@@ -189,7 +191,7 @@ button:hover {
 .nav_toggle {
   color: var(--primary-text-color);
   cursor: pointer;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .nav_toggle i:hover {
@@ -287,6 +289,112 @@ button:hover {
   font-weight: 400;
 }
 
+/* =================== Hero Carousel Banner =================== */
+.hero_carousel_banner {
+  position: relative;
+  background-color: #f5f3f4;
+  height: 100%;
+}
+
+/* ================= Happy Customers Seciton =================  */
+
+.client_banner {
+  background: var(--clr-gray);
+  border: 1px solid hsla(0, 0%, 62%, 0.1);
+  padding: 15px 0;
+}
+
+.happy_client_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.happyClient {
+  display: flex;
+  gap: 0.3rem;
+  font-weight: 300;
+}
+.happyClient > span {
+  font-weight: 500;
+}
+
+.happy_client_content > .circle {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: hsla(0, 0%, 85%, 0.77);
+}
+
+/* ========================== Cibil Banner Check Section =========================  */
+.cibil_checkBanner {
+  overflow: hidden;
+  margin: 40px 0;
+  z-index: 1;
+  background: #112a66;
+  position: relative;
+  border-radius: 8px;
+  padding: 25px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cibil_checkBanner > img {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  max-width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.cibil_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.cibil_check_heading {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 5px;
+  color: var(--clr-light);
+}
+
+.cibil_check_heading > .text_span {
+  color: var(--fourth-color);
+}
+
+.cibil_check_heading > .text_span .text_decoration {
+  text-decoration: line-through;
+}
+
+.cibil_check_subheading {
+  line-height: 18px;
+  color: var(--clr-gray);
+  font-size: 15px;
+}
+
+.cibil_check_btn {
+  display: inline-block;
+  background: var(--clr-light);
+  font-weight: 600;
+  gap: 4px;
+  color: var(--primary-text-color);
+}
+
+.cibil_check_btn:hover {
+  background: var(--clr-light);
+}
+
+.cibil_check_btn > span {
+  color: var(--second-color);
+}
+
 /*=============== NAV ===============*/
 
 /* 320px — 480px: Mobile devices
@@ -295,10 +403,26 @@ button:hover {
 1025px — 1200px: Desktops, large screens
 1201px and more —  Extra large screens, TV */
 
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 50%;
+@media screen and (min-width: 768px) {
+  .cibil_check_image {
+    position: absolute;
+    left: 26px;
+    bottom: -31px;
   }
+
+  .cibil_check_content {
+    padding-left: 220px;
+  }
+
+  .cibil_check_btn {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* html {
+    font-size: 50%;
+  } */
 
   .header {
     padding: 1.5rem 2rem;
@@ -308,22 +432,19 @@ button:hover {
     width: 100%;
     max-width: 100%;
   }
-}
 
-@media screen and (max-width: 768px) {
   .login-btn {
     display: none;
   }
 
   .nav_toggle {
     display: block;
-    position: relative;
   }
 
   .nav_toggle__menu,
   .nav_toggle__close {
     position: absolute;
-    top: -10px;
+    top: 0;
     right: 0;
     transition: opacity 0.1s, transform 0.4s;
   }
@@ -352,4 +473,23 @@ button:hover {
     padding: 0.5rem;
     font-size: 1.6rem;
   }
+
+  /* ================= Happy Customers Seciton =================  */
+
+  .happy_client_content > .circle {
+    display: none;
+  }
+
+  .happy_client_content {
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cibil_content {
+    flex-direction: column;
+  }
+  /* .cibil_check_content {
+    padding-left: 0;
+  } */
 }
