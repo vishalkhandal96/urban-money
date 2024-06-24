@@ -398,13 +398,15 @@ button:hover {
 }
 
 /* ============================ Trending Loan and Offers Section ============================  */
-/* .trending_loan {
-  padding: 40px 0 0;
+
+.trending_loan {
+  padding: 20px 0 0;
 }
-    .trending_loan > .container > h2,
-    .trending_loan > .container > p {
-  text-align: center 
-} */
+
+.trending_loan > .container > h2,
+.trending_loan > .container > p {
+  text-align: center;
+}
 
 .trending_loan > .container > h2 {
   line-height: normal;
@@ -430,7 +432,9 @@ button:hover {
   grid-auto-flow: column;
   grid-auto-columns: minmax(260px, 1fr);
   overflow-x: auto;
-  padding: 40px 0 15px;
+  background-color: transparent;
+  margin: 20px 0 40px;
+  padding: 10px;
 }
 
 .trending_card {
@@ -439,6 +443,7 @@ button:hover {
   background-color: #fff;
   padding: 20px;
   position: relative;
+  min-width: 260px;
 }
 
 .trending_card_heading {
@@ -528,6 +533,11 @@ button:hover {
 
   .cibil_check_btn {
     white-space: nowrap;
+  }
+
+  .trending_loan > .container > h2,
+  .trending_loan > .container > p {
+    text-align: left;
   }
 }
 
