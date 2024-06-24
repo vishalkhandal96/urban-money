@@ -124,6 +124,14 @@ button:hover {
   background-color: var(--first-color-hover);
 }
 
+/* ================= Resuable Classes ===================== */
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1170px;
+}
+
 /*=============== HEADER ===============*/
 
 .header {
@@ -135,7 +143,7 @@ button:hover {
   z-index: var(--z-fixed);
 }
 
-.container {
+.nav_container {
   position: relative;
 }
 
@@ -294,6 +302,11 @@ button:hover {
 
   .header {
     padding: 1.5rem 2rem;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
