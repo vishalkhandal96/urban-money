@@ -303,7 +303,7 @@ button:hover {
   }
 
   .nav_toggle {
-    display: inline-block;
+    display: block;
     position: relative;
   }
 
@@ -319,6 +319,7 @@ button:hover {
   }
 
   .navbar {
+    display: none;
     position: absolute;
     top: calc(100% + 1.7rem);
     right: 0;
