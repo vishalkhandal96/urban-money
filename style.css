@@ -293,8 +293,70 @@ button:hover {
 /* =================== Hero Carousel Banner =================== */
 .carousel_banner {
   position: relative;
-  top: 10px;
+  margin-block: 10px;
   background-color: #f5f3f4;
+}
+
+.carousel_banner_content {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  padding: 20px 0 20px;
+  gap: 8px;
+}
+
+.carousel_text {
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+}
+
+.carousel_text > .carousel_text_heading {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 200;
+}
+
+.carousel_text > .carousel_text_subheading {
+  line-height: 38px;
+  font-size: 27px;
+  padding-bottom: 20px;
+}
+
+.carousel_text_subheading > .carousel_title_span {
+  color: var(--second-color);
+  font-weight: 600;
+}
+
+.carousel_text > ul {
+  margin-bottom: 10px;
+}
+
+.carousel_text > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 22px;
+  margin-bottom: 5px;
+  color: var(--secondary-text-color);
+  font-size: 14px;
+}
+
+.carousel_btn {
+  display: flex;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.carousel_image {
+  flex: 1 1;
+  text-align: right;
+}
+.carousel_image figure {
+  justify-content: center;
   height: 100%;
 }
 
@@ -512,6 +574,134 @@ button:hover {
   align-items: flex-end;
 }
 
+/* =========================== Financial Calculator ============================= */
+.financial_calculator {
+  padding: 40px 0;
+}
+
+.financial_calculator > .container > h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: normal;
+}
+
+.financial_calculator > .container > p {
+  margin-top: 0.5rem;
+  line-height: 22px;
+  margin-inline: auto;
+  text-align: center;
+  opacity: 80%;
+  color: var(--primary-text-color);
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.financial_cal_content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.financial_cal_card {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #ececec;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.financial_cal_card_heading {
+  margin-bottom: 25px;
+  margin-top: 4rem;
+  white-space: nowrap;
+  font-size: 14px !important;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.financial_cal_card_heading::after {
+  position: absolute;
+  content: "";
+  background-color: #e9eaeb;
+  width: 42px;
+  border-radius: 3px;
+  top: 32px;
+  left: 0;
+  height: 5px;
+}
+
+.financial_cal_icon {
+  position: absolute;
+  top: 20px;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  padding: 13px 15px;
+  max-width: 60px;
+  width: 100%;
+}
+
+.financial_cal_subheading {
+  /* margin-top: 0.8rem; */
+  line-height: 22px;
+  margin-inline: auto;
+  opacity: 80%;
+  color: var(--primary-text-color);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.financial_cal_check {
+  color: var(--first-color);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* ======================== Banner Creditcard Section ======================  */
+
+.banner_creditcard {
+  padding: 40px 0;
+}
+
+.banner_creditcard > .container > h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: normal;
+}
+
+.banner_creditcard > .container > p {
+  margin-top: 0.5rem;
+  line-height: 22px;
+  margin-inline: auto;
+  text-align: center;
+  opacity: 80%;
+  color: var(--primary-text-color);
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.banner_card {
+  display: flex;
+  gap: 20px;
+  overflow: auto;
+  justify-content: center;
+}
+
+.banner_card figure {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 /*=============== NAV ===============*/
 
 /* 320px — 480px: Mobile devices
@@ -521,6 +711,10 @@ button:hover {
 1201px and more —  Extra large screens, TV */
 
 @media screen and (min-width: 768px) {
+  .carousel_banner_content {
+    flex-direction: row;
+  }
+
   .cibil_check_image {
     position: absolute;
     left: 26px;
@@ -539,6 +733,27 @@ button:hover {
   .trending_loan > .container > p {
     text-align: left;
   }
+
+  .financial_calculator > .container > h2,
+  .financial_calculator > .container > p {
+    text-align: left;
+  }
+
+  .banner_creditcard > .container > h2,
+  .banner_creditcard > .container > p {
+    text-align: left;
+  }
+
+  .financial_cal_content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .financial_cal_card_heading {
+    margin-top: 0px;
+  }
+  .financial_cal_icon {
+    right: 20px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -550,6 +765,10 @@ button:hover {
     grid-auto-columns: minmax(260px, 1fr);
     overflow-x: auto;
     padding: 32px 0;
+  }
+
+  .financial_cal_content {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
