@@ -744,7 +744,7 @@ button:hover {
 }
 
 .howItWork_about {
-  /* max-width: 281px; */
+  max-width: 281px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -1151,6 +1151,7 @@ footer .footer_container {
   opacity: 100%;
 }
 
+/* ========================= Copyright Section ================ */
 .copyright {
   background: #000;
   color: var(--clr-light);
@@ -1164,6 +1165,10 @@ footer .footer_container {
   flex-direction: column;
 }
 
+.copyright_container p {
+  font-size: 14px;
+}
+
 .copyright_container ul {
   display: flex;
   position: relative;
@@ -1172,7 +1177,7 @@ footer .footer_container {
 }
 
 .copyright_container ul li a {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   color: var(--clr-light);
   opacity: 70%;
@@ -1282,9 +1287,15 @@ footer .footer_container {
     grid-template-columns: repeat(auto-fit, minmax(142px, 1fr));
   }
 
-  .footer_first_section,
-  .footer_second_section {
+  .footer_first_section {
     grid-template-columns: repeat(1, minmax(250px, 1fr));
+    grid-auto-flow: column;
+  }
+  .footer_second_section {
+    /* grid-template-columns: repeat(1, max(500px)); */
+    /* grid-template-columns: repeat(1, 500px); */
+    grid-template-columns: 250px 1fr 1fr;
+    width: 100%;
     grid-auto-flow: column;
   }
 }
@@ -1359,8 +1370,6 @@ footer .footer_container {
     padding: 0.5rem;
     font-size: 1.6rem;
   }
-
-  /* ================= Happy Customers Seciton =================  */
 
   .happy_client_content > .circle {
     display: none;
