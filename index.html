@@ -19,6 +19,46 @@
     <title>
       Urban Money - One Fintech for all Banking and Finance Services
     </title>
+	
+	<style>
+	/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+	</style>
   </head>
   <body>
     <header id="header" class="header">
@@ -294,10 +334,11 @@
                       ><span>Lowest interest Rate</span>
                     </li>
                   </ul>
-                  <button class="carousel_btn" href="#"
+                  <button id="myBtn" class="carousel_btn" href="#"
                     ><span> Apply Now </span
                     ><i class="fa-solid fa-arrow-right"></i
                   ></button>
+
                 </div>
                 <div class="carousel_image">
                   <figure>
@@ -804,6 +845,79 @@
         </ul>
       </div>
     </div>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="main.js"></script>
+	<script type="module" src="abc.js"></script>
   </body>
 </html>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="form-grid grid">
+      <div class="form grid">
+        <form action="" method="post" class="form_content">
+          <h1 class="form_title">
+            Unlock Best <span>Personal Loan Offers</span>
+            <br>
+            From 10+ Lenders
+          </h1>
+          <div class="form_input">
+            <input type="text" placeholder="Required Loan Amount">
+            <input type="text" placeholder="Required Loan Amount">
+            <input type="text" placeholder="Required Loan Amount">
+            <select name="city" id="city-select">
+              <option value="">Choose City</option>
+              <option value="Jaipur">Jaipur</option>
+              <option value="Kota">Kota</option>
+              <option value="Jodhpur">Jodhpur</option>
+              <option value="Alwar">Alwar</option>              
+            </select>
+          </div>
+          <div class="terms_and_conditions">
+            <input type="checkbox" name="terms">
+            <label for="terms">I hereby appoint UrbanMoney as my authorised representative to receive my credit information from CIBIL. I hereby accept terms & conditions. <a href="">Read More.</a></label>
+          </div>
+          <button class="form-btn" type="submit">Get Quotes <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+      </div>
+      <div class="form_img">
+        <img src="https://www.urbanmoney.com/assets/images/personalLoanFrom.svg" alt="form image">
+      </div>
+    </div>
+    
+
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
