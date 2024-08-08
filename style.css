@@ -1410,10 +1410,65 @@ footer .footer_container {
   border-radius: 3px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 42px;
 }
 
 .contact-us-detail h3 {
+  font-weight: 400;
+  color: gray;
+  font-size: medium;
+  margin-bottom: 1rem;
+}
+
+/* =================== About Us Page CSS ==================== */
+
+.about-us-hero-section {
+  background-color: black;
+  position: relative;
+  padding: 50px 0;
+  z-index: 1;
+}
+
+.about-us figure img {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.about-us-detail {
+  position: relative;
+  color: white;
+  font-weight: 300;
+  margin-right: auto;
+  font-size: x-large;
+  line-height: 1.5;
+}
+
+.about-title {
+  margin-bottom: 1rem;
+  font-size: xx-large;
+  font-weight: 500;
+}
+.about-title::before {
+  content: "";
+  width: 50px;
+  height: 5px;
+  background: yellow;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  top: 42px;
+}
+
+.about-us-detail h3 {
   font-weight: 400;
   color: gray;
   font-size: medium;

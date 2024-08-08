@@ -17,6 +17,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Sunidhi Finserve</title>
+    <style>
+      .about-us-hero-section {
+        background-color: black;
+        position: relative;
+        padding: 50px 0;
+        z-index: 1;
+      }
+
+      .about-us figure img {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        object-fit: contain;
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      .about-us-detail {
+        position: relative;
+        color: white;
+        font-weight: 300;
+        margin-right: auto;
+        font-size: x-large;
+        line-height: 1.5;
+      }
+
+      .about-title {
+        margin-bottom: 1rem;
+        font-size: xx-large;
+        font-weight: 500;
+      }
+      .about-title::before {
+        content: "";
+        width: 50px;
+        height: 5px;
+        background: yellow;
+        border-radius: 3px;
+        position: absolute;
+        left: 0;
+        top: 42px;
+      }
+
+      .about-us-detail h3 {
+        font-weight: 400;
+        color: gray;
+        font-size: medium;
+        margin-bottom: 1rem;
+      }
+    </style>
   </head>
   <body>
     <!-- ====================== Header Section ========================== -->
@@ -54,70 +108,20 @@
 
     <!-- ====================== Main Section ========================== -->
     <main>
-      <section class="contact-us-hero-section">
+      <section class="about-us-hero-section">
         <div class="container">
-          <div class="contact-us">
-            <div class="contact-us-form">
-              <h2 class="form-title">Get in Touch</h2>
-              <form action="" method="post">
-                <div class="input-items">
-                  <label class="sr-only" for="name">Name</label>
-                  <input id="name" type="text" placeholder="Name" />
-                  <span class="input-error">input-error</span>
-                </div>
-                <div class="input-items">
-                  <label class="sr-only" for="email">Email</label>
-                  <input id="email" type="email" placeholder="E-mail" />
-                  <span class="input-error">input-error</span>
-                </div>
-                <div class="input-items">
-                  <label class="sr-only" for="mobile-number"
-                    >Mobile Number</label
-                  >
-                  <input
-                    id="mobile-number"
-                    type="number"
-                    placeholder="Mobile"
-                  />
-                  <span class="input-error">input-error</span>
-                </div>
-                <div class="input-items">
-                  <select name="select-about-you" id="select">
-                    <option value="">I Am</option>
-                    <option value="">lorem</option>
-                    <option value="">lorem</option>
-                    <option value="">lorem</option>
-                    <option value="">lorem</option>
-                  </select>
-                  <span class="input-error">input-error</span>
-                </div>
-                <div class="input-items">
-                  <textarea
-                    name="message"
-                    id="message"
-                    placeholder="Message"
-                  ></textarea>
-                </div>
-                <div class="input-items">
-                  <button type="submit">Get a Call Back</button>
-                </div>
-              </form>
-            </div>
-
-            <div class="contact-us-detail">
-              <h2 class="contact-title">Contact Us</h2>
-              <h3>We would love to hear from you! Call us on our India</h3>
-              <p>
-                Toll Free Number 1800 208 3344 <br /><span
-                  >or Fill the form</span
-                >
-              </p>
-            </div>
-            <div>
+          <div class="about-us">
+            <figure>
               <img
                 src="https://www.urbanmoney.com/assets/images/homeSlider/img_credit-score-report.svg"
                 alt=""
               />
+            </figure>
+
+            <div class="about-us-detail">
+              <h2 class="about-title">About Us</h2>
+              <h3>We Started With</h3>
+              <p>An Inspiration, And Now We Inspire.</p>
             </div>
           </div>
         </div>
