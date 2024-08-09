@@ -612,9 +612,11 @@ button:hover {
   display: grid;
   gap: 0 42px;
   grid-template-columns: repeat(4, minmax(auto, 1fr));
+
   grid-auto-flow: column;
   grid-auto-columns: minmax(260px, 1fr);
-  overflow-x: auto;
+  /* overflow-x: auto; */
+  overflow: hidden;
   background-color: transparent;
   margin: 20px 0 40px;
   padding: 10px;
@@ -627,6 +629,8 @@ button:hover {
   padding: 20px;
   position: relative;
   min-width: 260px;
+  display: flex;
+  flex-direction: column;
 }
 
 .trending_card_heading {
@@ -651,24 +655,22 @@ button:hover {
 .trending_card_subheading {
   width: 60%;
   margin-top: 36px;
-  line-height: 22px;
-  min-height: 66px;
-
+  line-height: 1.5;
   color: var(--secondary-text-color);
-  font-weight: 14px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  height: -webkit-fill-available;
 }
 
 .trending_card_InterestRate {
   width: 90px;
-  height: 45px;
   background: #000;
   border-radius: 0 8px 8px 0;
   position: relative;
   left: -20px;
   margin: 15px 0;
-  display: flex;
-  align-items: center;
   padding-left: 20px;
+  padding-block: 10px;
   background: var(--second-color);
   color: var(--clr-light);
   font-size: 20px;
@@ -679,7 +681,6 @@ button:hover {
   align-items: center;
   justify-content: space-between;
   color: var(--first-color);
-  margin-top: 16px;
   display: block;
   line-height: normal;
   font-weight: 500;
@@ -693,11 +694,9 @@ button:hover {
 
 .trending_product_image {
   position: absolute;
-  right: -13px;
+  right: -10px;
   height: 207px;
-  bottom: 0;
-  display: flex;
-  align-items: flex-end;
+  bottom: 10px;
 }
 
 /* =========================== Financial Calculator ============================= */
