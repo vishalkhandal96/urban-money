@@ -653,6 +653,7 @@ button:hover {
   margin-top: 36px;
   line-height: 22px;
   min-height: 66px;
+
   color: var(--secondary-text-color);
   font-weight: 14px;
 }
